@@ -15,7 +15,7 @@ export function Header({ title }: Props) {
             px={5}
         >
             <HStack w='full' alignItems='center' justifyContent='space-between'>
-                <Text color='white' fontFamily='heading' fontSize='md' textAlign='center'>
+                <Text color='white' fontFamily='heading' fontWeight='bold' fontSize='xl' textAlign='center'>
                     {title}
                 </Text>
             </HStack>

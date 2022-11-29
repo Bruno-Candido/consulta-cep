@@ -1,19 +1,32 @@
-import { VStack, Heading } from 'native-base'
+import { VStack, Box, Text } from 'native-base'
+import { useRoute} from '@react-navigation/native'
 
 import { Header } from '../components/Header'
 
+interface RouteParams {
+    code: string
+    state: string
+    city: string
+    district: string
+    address: string
+}
 
-export function CepScreen(props){
+export function CepScreen(){
+    const route = useRoute()
+    const {code, state, city, district, address} = route.params as RouteParams
+
     return(
         <VStack flex={1} bgColor='gray.900'>
             <Header title='C E P'/>
-            <Heading color='white' fontFamily='heading' fontSize='xl' mb={8} textAlign='center'>
-                Cep: {props.route.params.code}{'\n'}
-                Estado: {props.route.params.state}{'\n'}
-                Cidade: {props.route.params.city}{'\n'}
-                Setor: {props.route.params.district}{'\n'}
-                Endereço: {props.route.params.address}
-            </Heading>
+                <Box pt={4}>
+                    <Text color='gray.300' fontSize='xl' textAlign='center' fontWeight='bold'>
+                        Cep: {code} {'\n'}
+                        Estado: {state}{'\n'}
+                        Cidade: {city}{'\n'}
+                        Setor: {district}{'\n'}
+                        Endereço: {address}{'\n'}
+                    </Text>
+                </Box>
         </VStack>
     )
 }

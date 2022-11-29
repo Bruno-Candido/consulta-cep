@@ -11,7 +11,6 @@ export function About(){
                 App simples de consulta de CEP{'\n'} 
                 usando uma Api publica {'\n'}
                 https://apicep.com/api-de-consulta/{'\n'}
-                desenvolvida usando ReactNative
             </Heading>
         </VStack>
         

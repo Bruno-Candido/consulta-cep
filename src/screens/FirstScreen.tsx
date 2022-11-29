@@ -1,5 +1,5 @@
 import { Center, Icon, useToast} from 'native-base'
-import { useState, useEffect } from 'react'
+import { useState } from 'react'
 import { Fontisto } from '@expo/vector-icons'
 import { useNavigation } from '@react-navigation/native'
 
@@ -9,8 +9,6 @@ import { Input } from '../components/Input'
 
 
 export function FirstScreen({ navigation }){
-    
-    const { navigate } = useNavigation()
     const [cep, setCep] = useState('')
     const toast = useToast()
 
